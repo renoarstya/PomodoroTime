@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pomodoro TIME</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="icon" type="image/png" href="image/favicono.png">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Pomodoro TIME</h1>
+        
+        <div class="timer">
+            <div class="time-display">
+                <span id="minutes">25</span>:<span id="seconds">00</span>
+            </div>
+            
+            <div class="timer-status">
+                <span id="status">PRODUKTIF</span>
+            </div>
+            
+            <div class="controls">
+                <button id="start"><i class="fas fa-play"></i> Start</button>
+                <button id="pause"><i class="fas fa-pause"></i> Pause</button>
+                <button id="reset"><i class="fas fa-redo"></i> Reset</button>
+            </div>
+            
+            <div class="session-count">
+                <p>Completed Sessions: <span id="session-counter">0</span></p>
+            </div>
+        </div>
+        
+        <div class="settings">
+            <h2>Settings</h2>
+            <div class="setting-item">
+                <label for="work-time">Work Time (minutes):</label>
+                <input type="number" id="work-time" min="1" max="60" value="25">
+            </div>
+            <div class="setting-item">
+                <label for="break-time">Break Time (minutes):</label>
+                <input type="number" id="break-time" min="1" max="30" value="5">
+            </div>
+            <button id="save-settings">Save Settings</button>
+        </div>
+    </div>
+    
+    <audio id="alarm-sound" src="alarm.mp3"></audio>
+    
+    <script src="script.js"></script>
+</body>
+</html>
